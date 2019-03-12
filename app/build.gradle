@@ -5,8 +5,8 @@ apply plugin: 'fullstory'
 fullstory {
     org 'XXXX'
     enabledVariants 'release'
-    server 'http://fullstory.com'
-    runtimeServer 'http://fullstory.com'
+    server 'http://localhost:8080'
+    runtimeServer 'http://localhost:8080'
     verboseLogging true
 }
 
