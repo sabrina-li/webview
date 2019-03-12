@@ -4,9 +4,11 @@ buildscript {
     repositories {
         jcenter()
         google()
+        maven { url "https://maven.fullstory.com" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.0'
+        classpath 'com.android.tools.build:gradle:3.3.2'
+        classpath 'com.fullstory:gradle-plugin-local:0.93'
     }
 }
 
@@ -14,5 +16,8 @@ allprojects {
     repositories {
         jcenter()
         google()
+        maven {
+            url 'https://maven.fullstory.com'
+        }
     }
 }

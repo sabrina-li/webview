@@ -1,14 +1,25 @@
 apply plugin: 'com.android.application'
 
+
+apply plugin: 'fullstory'
+fullstory {
+    org 'XXXX'
+    enabledVariants 'release'
+    server 'http://localhost:8080'
+    runtimeServer 'http://localhost:8080'
+    verboseLogging true
+}
+
 android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "com.example.app"
-        minSdkVersion 21
+        applicationId "com.example.app.fstest"
+        minSdkVersion 26
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -16,8 +27,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:multidex:1.0.3'
 }
