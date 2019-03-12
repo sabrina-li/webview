@@ -30,6 +30,8 @@ public class MainActivity extends Activity {
 
         FS.identify(useruid);
         Log.e("fullstory","identify");
+        vars.put("userPlatform","Android Mobile");
+        FS.setUserVars(vars);
 
 
 
