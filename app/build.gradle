@@ -6,7 +6,7 @@ fullstory {
     org 'XXXX'
     enabledVariants 'release'
     server 'http://fullstory.com'
-    runtimeServer 'http://localhost:8080'
+    runtimeServer 'http://fullstory.com'
     verboseLogging true
 }
 
